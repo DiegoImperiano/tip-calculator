@@ -101,7 +101,7 @@ input.button {
   border: none;
   margin: 5px 5px;
   width: 22vw;
-  height: 5vh;
+  height: auto;
 }
 .valor {
   margin-left: 4rem;
@@ -113,7 +113,7 @@ input.button {
   border: none;
   margin: 5px 5px;
   width: 22vw;
-  height: 5vh;
+  height: auto;
 }
 
 @media (min-width: 1200px) {
