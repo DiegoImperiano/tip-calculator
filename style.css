@@ -118,6 +118,8 @@ input.button {
 
 @media (min-width: 1200px) {
   body {
+    overflow-y: hidden;
+    margin: auto;
     background: var(--primary-color);
     font-family: 'Space Mono', monospace;
   }
