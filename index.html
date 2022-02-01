@@ -28,8 +28,7 @@
   <body>
     <div class="body">
       <h1>
-        S P L I<br />
-        T T E R
+        <img src="/images/logo.svg" alt="splitter" />
       </h1>
 
       <div class="container">
@@ -38,9 +37,10 @@
             <p>Bill</p>
           </label>
           <p class="info">
+            <img src="/images/icon-dollar.svg" alt="icon dolar" />
             <input
               type="number"
-              placeholder="R$0.00"
+              placeholder="0.00"
               name="bill"
               id="bill"
               class="inform"
@@ -48,27 +48,44 @@
             />
           </p>
           <p>Select Tip %</p>
-          <input type="button" class="button" value="5%" onclick="calc(0.05)" />
-          <input type="button" class="button" value="10%" onclick="calc(0.1)" />
-          <input
-            type="button"
-            class="button"
-            value="15%"
-            onclick="calc(0.15)"
-          />
-          <input
-            type="button"
-            class="button"
-            value="25%"
-            onclick="calc(0.25)"
-          />
-          <input type="button" class="button" value="50%" onclick="calc(0.5)" />
-          <input id="custon" type="button" value="No Tip" onclick="calc(0)" />
-
+          <div class="buttons">
+            <input
+              type="button"
+              class="button"
+              value="5%"
+              onclick="calc(0.05)"
+            />
+            <input
+              type="button"
+              class="button"
+              value="10%"
+              onclick="calc(0.1)"
+            />
+            <input
+              type="button"
+              class="button"
+              value="15%"
+              onclick="calc(0.15)"
+            />
+            <input
+              type="button"
+              class="button"
+              value="25%"
+              onclick="calc(0.25)"
+            />
+            <input
+              type="button"
+              class="button"
+              value="50%"
+              onclick="calc(0.5)"
+            />
+            <input id="custom" type="number" placeholder="custom" />
+          </div>
           <label for="people">
             <p>Number of People</p>
           </label>
           <p class="info">
+            <img src="/images/icon-person.svg" alt="icone person" />
             <input
               type="number"
               placeholder="0"
@@ -84,26 +101,26 @@
             <p>
               Tip Amount <br />
               <span class="quebra">/ person</span>
-              <span class="valor" id="tip">R$0.00</span>
+              <span class="valor" id="tip">$0.00</span>
             </p>
             <p>
               Total <br />
               <span class="quebra">/ person</span>
-              <span class="valor" id="totaltip">R$0.00</span>
+              <span class="valor" id="totaltip">$0.00</span>
             </p>
           </div>
           <input id="reset" type="button" value="RESET" onclick="reset()" />
         </div>
       </div>
       <!--Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
-    //person Total / person Reset-->
+      //person Total / person Reset-->
 
       <div class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
         >. Coded by
-        <a href="https://www.linkedin.com/in/diegoimperiano/">Diego Imperiano</a>.
+        <a href="https://github.com/DiegoImperiano">Diego Imperiano</a>.
       </div>
     </div>
     <script src="script.js"></script>
