@@ -6,7 +6,8 @@
   --font-primary-color: #35c1b1;
 }
 body {
-  width: 98vw;
+  padding: 2px;
+  max-width: 80%;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -15,19 +16,18 @@ body {
 }
 div.body {
   margin: 0;
-  padding: 0;
-  overflow-x: hidden;
   text-align: center;
 }
 .container {
-  margin: 0;
   text-align: center;
   overflow-x: hidden;
+
   width: 100%;
   height: 180%;
-  padding-bottom: 1rem;
+  padding: 2rem;
   background: white;
   border-radius: 20px;
+  margin-left: 5vw;
 }
 h1 {
   margin-top: 2rem;
@@ -35,16 +35,17 @@ h1 {
   font-size: 16px;
 }
 .calc {
+  display: inline;
+  width: 40%;
   margin: auto;
   padding: 1rem;
 }
 .res {
   color: white;
   padding: 1rem;
-  width: 75%;
-  margin: auto;
+  width: 90%;
   background: var(--secondary-color);
-  border-radius: 20px;
+  border-radius: 1.25rem;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -59,18 +60,30 @@ input[type='number'] {
 .attribution {
   margin-top: 2rem;
   margin-bottom: 2rem;
+  margin-left: 20%;
 }
 span {
   color: var(--font-primary-color);
   font-size: 20px;
 }
-
+.buttons {
+  margin: 3rem 0 3rem 0;
+}
 .inform {
   text-align: right;
+  font-family: 'Space Mono', monospace;
+  font-weight: bold;
+  max-width: 70vw;
 }
 .info {
   text-align: center;
 }
+.info img {
+  position: absolute;
+  margin-left: 1rem;
+  margin-top: 0.9rem;
+}
+
 p {
   text-align: left;
 }
@@ -88,11 +101,16 @@ input {
   width: 76vw;
 }
 #reset {
-  border-radius: 4px;
+  width: 90%;
+  height: 2.75rem;
+  padding: 0.5rem;
+  border-radius: 0.3125rem;
+  background-color: var(--primary-color);
+  font-size: 1rem;
+  color: white;
+  text-align: center;
   border: none;
-  background: hsl(180, 22%, 50%);
-  width: 12rem;
-  height: 2rem;
+  opacity: 0.3;
 }
 input.button {
   color: white;
@@ -100,36 +118,44 @@ input.button {
   border-radius: 4px;
   border: none;
   margin: 5px 5px;
-  width: 22vw;
-  height: auto;
+  width: 25vw;
+  height: 5vh;
+  max-width: 100px;
 }
 .valor {
-  margin-left: 4rem;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-left: 2rem;
 }
-#custon {
+#custom {
   color: #6d8180;
   background: #f3f8fb;
   border-radius: 4px;
   border: none;
-  margin: 5px 5px;
-  width: 22vw;
-  height: auto;
+  width: 21vw;
+  height: 3vh;
+  max-width: 86px;
 }
 
 @media (min-width: 1200px) {
   body {
+    margin: 0;
+    font-weight: bold;
     overflow-y: hidden;
-    margin: auto;
+    overflow-x: hidden;
     background: var(--primary-color);
     font-family: 'Space Mono', monospace;
   }
-  div.body {
+  .body {
+    margin-left: 20vw;
     text-align: center;
   }
+
   .container {
-    width: 40rem;
-    height: 22rem;
-    padding: 1rem;
+    margin-left: 20%;
+    overflow-y: hidden;
+    max-width: 750px;
+    max-height: 55vh;
     background: white;
     border-radius: 20px;
     box-shadow: 3px 3px 3px var(--tertiary-color);
@@ -137,23 +163,29 @@ input.button {
   }
   h1 {
     margin-top: 3rem;
+    margin-left: 20%;
     margin-bottom: 2rem;
     font-size: 16px;
   }
   .calc {
+    margin: auto;
     text-align: left;
-    padding: 1rem;
-    width: 28rem;
-    height: 20rem;
+    height: 50vh;
   }
   .res {
     color: white;
     padding: 1rem;
-    width: 21.3rem;
-    height: 20rem;
+    width: 40%;
+    max-height: 80vh;
     background: var(--secondary-color);
     border-radius: 10px;
   }
+  .info img {
+    position: absolute;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
@@ -165,18 +197,23 @@ input.button {
     border-style: none;
   }
   .attribution {
-    margin-top: 4.5rem;
+    margin-left: 20%;
+    font-size: 18px;
+    margin-top: 3rem;
   }
   span {
     color: var(--font-primary-color);
-    font-size: 20px;
   }
-
+  .buttons {
+    margin: 1rem 0 1rem 0;
+  }
   .inform {
+    max-width: 80%;
     text-align: right;
-    padding-right: 1rem;
+    padding-right: 0.5rem;
   }
   p {
+    margin: 2px;
     text-align: left;
   }
   .quebra {
@@ -187,20 +224,22 @@ input.button {
   }
 
   input {
-    font-size: 16px;
+    font-size: 20px;
     border-radius: 4px;
     border: none;
     background: #f3f8fb;
-    width: 19.5rem;
-    height: 2rem;
+    max-width: 23rem;
+    max-height: 2rem;
   }
   #reset {
     border-radius: 4px;
     border: none;
     background: hsl(180, 22%, 50%);
-    margin-top: 3rem;
-    width: 12rem;
-    height: 2rem;
+    margin-top: 10vh;
+    margin-bottom: auto;
+    max-width: 20rem;
+    max-width: 30vw;
+    max-height: 4rem;
   }
   input.button {
     color: white;
@@ -208,19 +247,20 @@ input.button {
     border-radius: 4px;
     border: none;
     margin: 5px 5px;
-    width: 5.5rem;
-    height: 2rem;
+    max-width: 7.5rem;
+    max-height: 3rem;
   }
   .valor {
-    margin-left: 4rem;
+    font-size: 45px;
+    float: right;
+    font-weight: bold;
   }
-  #custon {
+  #custom {
     color: #6d8180;
     background: #f3f8fb;
     border-radius: 4px;
     border: none;
-    margin: 5px 5px;
-    width: 5.5rem;
-    height: 2rem;
+    max-width: 6.7rem;
+    max-height: 3rem;
   }
 }
