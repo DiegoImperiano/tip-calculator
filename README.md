@@ -23,7 +23,7 @@ _Tela inicial:_
 <img src=".github/imagem1.png"/>
 
 _Quando a porcentagem é informada sem que todos os campos sejam preenchidos:_
-<img src="github/imagem2.png"/>
+<img src=".github/imagem2.png"/>
 
 _Informações calculadas:_
 <img src=".github/imagem3.png"/>
